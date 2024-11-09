@@ -17,9 +17,9 @@ interface FormErrors {
 }
 
 const Page = () => {
-  const [rank, setRank] = useState(1);
-  const [percentile, setPercentile] = useState(100);
-  const [marks, setMarks] = useState(15);
+  const [rank, setRank] = useState(12);
+  const [percentile, setPercentile] = useState(30);
+  const [marks, setMarks] = useState(6);
   const [showModal, setShowModal] = useState(false);
   const [error, setError] = useState<FormErrors>({});
 
@@ -91,8 +91,8 @@ const Page = () => {
           <div className="p-5 border rounded-md">
             <h1 className="font-bold">Quick Statistics</h1>
 
-            <div className="flex p-5 justify-between flex-col lg:flex-row gap-10">
-              <div className="flex items-center justify-between gap-5">
+            <div className="flex p-5 justify-between flex-col xl:flex-row gap-4">
+              <div className="flex items-center xl:border-r xl:pr-5 justify-between gap-5">
                 <div className="bg-slate-100 p-4 rounded-full">
                   <Image src={trophy} alt="trophy" className="w-6" />
                 </div>
@@ -101,7 +101,7 @@ const Page = () => {
                   <p className="font-thin">YOUR RANK</p>
                 </div>
               </div>
-              <div className="flex items-center justify-between gap-5">
+              <div className="flex items-center xl:border-r xl:pr-5 justify-between gap-5">
                 <div className="bg-slate-100 p-4 rounded-full">
                   <Image src={notepad} alt="trophy" className="w-6" />
                 </div>
