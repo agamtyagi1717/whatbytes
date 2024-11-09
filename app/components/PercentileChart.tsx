@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import {
@@ -61,7 +59,7 @@ const PercentileChart = ({ mypercentile }: { mypercentile?: number }) => {
     : [];
 
   const data = {
-    labels: [],
+    labels: sortedData.map(entry => entry.x),  // Adding x values as labels
     datasets: [
       {
         label: 'Number of Students at Percentiles',
@@ -97,16 +95,15 @@ const PercentileChart = ({ mypercentile }: { mypercentile?: number }) => {
     },
     scales: {
       x: {
-        type: 'linear',
-        position: 'bottom',
+        display: true, 
         grid: {
-          display: false,
+          display: false, 
         },
       },
       y: {
-        display: false,
+        display: false,  
         grid: {
-          display: false,
+          display: false, 
         },
       },
     },
