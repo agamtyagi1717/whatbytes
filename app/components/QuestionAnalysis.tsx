@@ -12,7 +12,7 @@ const QuestionAnalysis = ({marks}: any) => {
         <span className="font-semibold">
           You scored {marks} questions correct out of 15
         </span>
-        . However it still needs improvements
+        . {marks < 15 ? <>However it still needs improvements</> : <>Congrats 🥳</>}
       </p>
       <CircularBar marks={marks}/>
     </div>
